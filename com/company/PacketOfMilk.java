@@ -17,7 +17,7 @@ public class PacketOfMilk {
     protected int priceFromManufacturer;
     protected float pHLevel;
 
-    PacketOfMilk() {
+   public PacketOfMilk() {
         shelfLifeMonths += 1;
         manufacturer = "none";
         fatness = 0;
@@ -36,7 +36,7 @@ public class PacketOfMilk {
 
     }
 
-    PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams) {
+    public PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams) {
         this();
         this.manufacturer = manufacturer;
         this.fatness = fatness;
@@ -44,7 +44,7 @@ public class PacketOfMilk {
         this.caloriesPer100Grams = caloriesPer100Grams;
     }
 
-    PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams, String typeOfMilk,
+    public PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams, String typeOfMilk,
                  int sweetnessInPercents, String toppings, double price, String lactose, String typeOfCarton,
                  int priceFromManufacturer, float pHLevel) {
         this(manufacturer, fatness, volumeInMll, caloriesPer100Grams);
