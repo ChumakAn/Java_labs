@@ -1,28 +1,42 @@
 package com.company;
 
-class packetOfMilk {
+public class PacketOfMilk {
     private static int shelfLifeMonths = 0;
-    private String manufacturer = "none";
-    private int fatness = 0;
-    private int volumeInMll = 0;
-    private int caloriesPer100Grams = 0;
-    private String typeOfMilk = "default";
+    private String manufacturer;
+    private int fatness;
+    private int volumeInMll;
+    private int caloriesPer100Grams;
+    private String typeOfMilk;
 
-    private int sweetnessInPercents = 0;
-    private String toppings = "default";
-    private float price = 0;
-    private String lactose = "default";
-    private String typeOfCarton = "default";
+    private int sweetnessInPercents;
+    private String toppings;
+    private double price;
+    private String lactose;
+    private String typeOfCarton;
 
-    protected int priceFromManufacturer = 0;
-    protected float pHLevel = 0;
+    protected int priceFromManufacturer;
+    protected float pHLevel;
 
-    packetOfMilk() {
+    PacketOfMilk() {
         shelfLifeMonths += 1;
+        manufacturer = "none";
+        fatness = 0;
+        volumeInMll = 0;
+        caloriesPer100Grams = 0;
+        typeOfMilk = "default";
+
+        sweetnessInPercents = 0;
+        toppings = "default";
+        price = 0;
+        lactose = "default";
+        typeOfCarton = "default";
+
+        priceFromManufacturer = 0;
+        pHLevel = 0;
 
     }
 
-    packetOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams) {
+    PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams) {
         this();
         this.manufacturer = manufacturer;
         this.fatness = fatness;
@@ -30,8 +44,8 @@ class packetOfMilk {
         this.caloriesPer100Grams = caloriesPer100Grams;
     }
 
-    packetOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams, String typeOfMilk,
-                 int sweetnessInPercents, String toppings, float price, String lactose, String typeOfCarton,
+    PacketOfMilk(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams, String typeOfMilk,
+                 int sweetnessInPercents, String toppings, double price, String lactose, String typeOfCarton,
                  int priceFromManufacturer, float pHLevel) {
         this(manufacturer, fatness, volumeInMll, caloriesPer100Grams);
         this.typeOfMilk = typeOfMilk;
@@ -109,11 +123,11 @@ class packetOfMilk {
         this.toppings = toppings;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -160,15 +174,15 @@ class packetOfMilk {
     }
 
     public static void printStaticShelfLife() {
-        System.out.println("Shelf life is " + shelfLifeMonths + "months");
+        System.out.println("Shelf life is " + shelfLifeMonths + " months");
     }
 
     public void printShelfLife() {
-        System.out.println("Shelf life is " + shelfLifeMonths + "months");
+        System.out.println("Shelf life is " + shelfLifeMonths + " months");
     }
 
     public void resetValues(String manufacturer, int fatness, int volumeInMll, int caloriesPer100Grams, String typeOfMilk,
-                            int sweetnessInPercents, String toppings, float price, String lactose, String typeOfCarton,
+                            int sweetnessInPercents, String toppings, double price, String lactose, String typeOfCarton,
                             int priceFromManufacturer, float pHLevel) {
         this.manufacturer = manufacturer;
         this.fatness = fatness;
