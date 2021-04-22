@@ -24,12 +24,9 @@ public class ShopManager {
         return goods.stream().filter(item -> item.getTarget() == target).collect(Collectors.toList());
     }
 
-    public List<Item> sortByBrand(final SortOrder order) {
-        return sortByBrand(order, goods);
-    }
 
-    public List<Item> sortByBrand(final SortOrder sortOrder, final List<Item> listOfItems) {
-        List<Item> sortedList = new ArrayList<>(listOfItems);
+    public List<Item> sortByBrand(final SortOrder sortOrder) {
+        List<Item> sortedList = new ArrayList<>(goods);
         if (sortOrder == SortOrder.ASC) {
             sortedList.sort((item1, item2) -> item1.getBrand().compareTo(item2.getBrand()));
         } else {
@@ -39,12 +36,9 @@ public class ShopManager {
 
     }
 
-    public List<Item> sortByPrice(final SortOrder order) {
-        return sortByPrice(order, goods);
-    }
 
-    public List<Item> sortByPrice(final SortOrder sortOrder, final List<Item> listOfItems) {
-        List<Item> sortedList = new ArrayList<>(listOfItems);
+    public List<Item> sortByPrice(final SortOrder sortOrder) {
+        List<Item> sortedList = new ArrayList<>(goods);
         if (sortOrder == SortOrder.ASC) {
             sortedList.sort((item1, item2) -> item1.getPrice().compareTo(item2.getPrice()));
         } else {
