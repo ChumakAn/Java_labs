@@ -16,7 +16,6 @@ Methods
 In the main () method, define 3 objects of type from the task (due to different constructors) and output information about them using the toString () method and output information using the printStaticField () and printField () methods
 
 ### TASK FOR LAB 8:
--
  - Write code for Lab 2(UML diagram)
  - Use java code convention
  - CLasses must be distributed in packages
@@ -33,7 +32,6 @@ In the main () method, define 3 objects of type from the task (due to different 
  - Run `mvn site` and fix errors reported by checkstyle, pmd and findbugs
 
 ### TO RUN:
--
  - Clone/download LabNo8 branch
  - If you`re using IntelliJi IDEA: push 'RUN' button. 
  - Else:
@@ -42,7 +40,6 @@ In the main () method, define 3 objects of type from the task (due to different 
  - Go into `target/classes` and run `java ua/lviv/iot/shop/App` 
  
  ### USEFUL COMMANDS:
- -
 - mvn checkstyle:check
 - mvn findbugs:gui
 - mvn pmd:pmd
