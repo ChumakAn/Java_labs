@@ -45,13 +45,15 @@ In the main () method, define 3 objects of type from the task (due to different 
 
 
 
-### TO RUN:
- - Clone/download LabNo8 branch
- - If you`re using IntelliJi IDEA: push 'RUN' button. 
- - Else:
- - Open cmd and go to the into repo folder
- - Run `mvn compile`
- - Go into `target/classes` and run `java ua/lviv/iot/shop/App` 
+### TASK FOR 10 LAB:
+Implement saving of one of the classes from 8-th lab in a table in a database using `spring.boot` and `spring.data`
+ - 9-th lab code should be changed in such way, that permits saving/reading data to/from database
+ - Code should comply with code convention
+ - Code should be checked with findbugs, pmd and checkstyle plugins
+ - A separate pull request should be created
+ - Code must contain separate `*Controller`, `*Service` and `*Repository` classes
+ - Configuration of database accessing should be done through properties file
+
  
  ### USEFUL COMMANDS:
 - mvn checkstyle:check
